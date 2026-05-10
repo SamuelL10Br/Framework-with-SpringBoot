@@ -1,0 +1,21 @@
+### Criar usuário
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Samuel Luciano",
+  "email": "samuel@email.com",
+  "password": "123456"
+}
+
+### Criar post para o usuário 1
+POST http://localhost:8080/posts/1
+Content-Type: application/json
+
+{
+  "title": "Meu primeiro post",
+  "content": "Este é um post de teste para validar o cache no Spring Boot."
+}
+
+### Listar posts
+GET http://localhost:8080/posts
