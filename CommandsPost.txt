@@ -1,0 +1,60 @@
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Samuel Luciano",
+  "email": "samuel@email.com",
+  "password": "123456"
+}
+
+POST http://localhost:8080/posts/1
+Content-Type: application/json
+
+{
+  "title": "Meu primeiro post",
+  "content": "Post criado para testar comentários."
+}
+
+POST http://localhost:8080/comments/post/1/user/1
+Content-Type: application/json
+
+{
+  "content": "Excelente post sobre Spring Boot!"
+}
+
+POST http://localhost:8080/tags
+Content-Type: application/json
+
+{
+  "name": "#springboot"
+}
+
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "samuel@email.com",
+  "password": "123456"
+}
+
+### Criar usuário
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "name": "Samuel Luciano",
+  "email": "samuel@email.com",
+  "password": "123456"
+}
+
+### Criar post para o usuário 1
+POST http://localhost:8080/posts/1
+Content-Type: application/json
+
+{
+  "title": "Meu primeiro post",
+  "content": "Este é um post de teste para validar o cache no Spring Boot."
+}
+
+### Listar posts
+GET http://localhost:8080/posts
